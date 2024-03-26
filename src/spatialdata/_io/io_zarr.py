@@ -136,8 +136,6 @@ def read_zarr(store: Union[str, Path, zarr.Group], selection: Optional[tuple[str
         group = f[subgroup_name]
         tables = read_table_and_validate(f_store_path, f, group, tables)
 
-        logger.debug(f"Found {count} elements in {group}")
-
     sdata = SpatialData(
         images=images,
         labels=labels,
