@@ -35,7 +35,7 @@ class Elements(UserDict[str, Any]):
     @staticmethod
     def _check_key(key: str, element_keys: Iterable[str], shared_keys: set[str | None]) -> None:
         if key in element_keys:
-            warn(f"Key `{key}` already exists. Overwriting it.", UserWarning, stacklevel=2)
+            warn(f"Key `{key}` already exists. Overwriting it.", UserWarning, stacklevel=3)
         else:
             if key in shared_keys:
                 raise KeyError(f"Key `{key}` already exists.")
